@@ -1,8 +1,8 @@
 --options--
 
-saveRegion = Region3.new( --region3 to save
-	Vector3.new(556.365, -49.25, -549.184),
-	Vector3.new(-585.811, 572.358, 579.458)
+saveRegion = Region3.new( 
+	Vector3.new(556.365, -49.25, -549.184), --corner a
+	Vector3.new(-585.811, 572.358, 579.458) --corner b
 )
 
 --code--
