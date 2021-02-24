@@ -1,9 +1,10 @@
 --options--
 
 saveRegion = Region3.new( 
-	Vector3.new(556.365, -49.25, -549.184), --corner a
-	Vector3.new(-585.811, 572.358, 579.458) --corner b
+	Vector3.new(-100,-100,-100), --corner a
+	Vector3.new(100,100,100) --corner b
 )
+showRegions = false --show regions as they're being saved (it do be colorful doe)
 
 --code--
 
@@ -174,10 +175,12 @@ wait(1)
 
 regionSections = splitRegion(saveRegion, maxAxisSize)
 
-for i = 1, #regionSections do
-	renderRegionAsPart(regionSections[i])
+if showRegions then
+	for i = 1, #regionSections do
+		renderRegionAsPart(regionSections[i])
+	end
 end
-	
+
 print("done splitting, saving data...")
 wait(1)
 local tData = Instance.new("BoolValue",workspace)
